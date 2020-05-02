@@ -365,6 +365,7 @@ header.contactHeaderBox div.contactTop {
 .contactHeaderBox .contactTop h2 {
     text-align: left;
 }
+/* TODO:formの残骸 */
 @media screen and (min-width:375px) {
     .contactHeaderBox .contactTop section.mailForm {
         margin: 10px 0;
@@ -411,28 +412,4 @@ footer .footerMedia h3 {
 }
 .contactContainer .mapBox aside div.storeInformation {
     padding: 10px;
-}
-footer div.footerMedia {
-    background-color: #FBF7F1;
-}
-footer div.footerMedia section.mediaBox {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 10px 50px;
-}
-@media screen and (min-width:1024px) {
-    footer div.footerMedia section.mediaBox {
-        flex-direction: row;
-        justify-content: space-between;
-        width: 80%;
-        margin: 0 auto;
-    }
-}
-.footerMedia .mediaBox div.frameBox {
-    margin: 10px 0;
-}
-.footerMedia .mediaBox>div>div[class*=Box] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
