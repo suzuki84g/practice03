@@ -216,6 +216,7 @@ header.contactHeaderBox {
 }
 
 /* news */
+/* TODO:header設定 */
 header.newsHeaderBox .newsTop {
     margin: 30px 0 50px;
 }
@@ -316,6 +317,7 @@ header.newsHeaderBox .newsTop {
 }
 
 /* menu */
+/* TODO:header */
 header.menuHeaderBox .menuTop {
     margin: 60px 0 240px;
 }
@@ -356,6 +358,7 @@ header.menuHeaderBox .menuTop {
 }
 
 /* contact */
+/* TODO:header */
 header.contactHeaderBox div.contactTop {
     margin: 40px 10px;
 }
