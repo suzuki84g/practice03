@@ -48,17 +48,20 @@
         </header>
 
         <main class="contactContainer">
-            <!-- TODO:ガッタガタなので直す -->
             <section class="mailForm">
                 <h2>お問い合わせはこちら</h2>
-                <form action="mailTo.php">
+                <form>
                     <dl>
                         <dt>お名前</dt>
                         <dd><input type="text" name="fullName"></dd>
+                        <dt>電話番号</dt>
+                        <dd><input type="text" name="phoneNumber"></dd>
                         <dt>メールアドレス</dt>
                         <dd><input type="text" name="email"></dd>
-                        <dt>メッセージ</dt>
-                        <dd><textarea name="message" cols="30" rows="4"></textarea></dd>
+                        <dt>人数（最大10名）</dt>
+                        <dd><input type="text" name="numOfPeople"></dd>
+                        <dt>その他</dt>
+                        <dd><textarea name="message" cols="30" rows="4" maxlength="200"></textarea></dd>  <!-- 最大200字 -->
                     </dl>
                     <input type="submit" value="送信">
                 </form>
