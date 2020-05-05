@@ -356,10 +356,13 @@ main.indexBox button, form input[type=submit] {
 .contactContainer section.mailForm {
     padding: 10px;
 }
-.contactContainer section.mailForm dt {
+.contactContainer section.mailForm form{
+    padding: 10px;
+}
+.contactContainer section.mailForm form dt {
     padding-top: 8px;
 }
-.contactContainer section.mailForm dd {
+.contactContainer section.mailForm form dd {
     padding-top: 3px;
 }
 .contactContainer form input[type=text], .contactContainer form textarea {
