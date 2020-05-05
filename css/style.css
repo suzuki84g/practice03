@@ -127,6 +127,25 @@ header[class*=HeaderBox] h2 {  /* indexは該当タグ無し */
     font-weight: 400;
     font-size: xx-large;
 }
+/* TODO:newsHeader */
+header.newsHeaderBox .newsTop {
+    margin: 30px 0 50px;
+}
+/* TODO:menuHeader */
+header.menuHeaderBox .menuTop {
+    margin: 60px 0 240px;
+}
+.menuHeaderBox .menuTop p {
+    margin: 20px 15px 0;
+}
+/* TODO:contactHeader */
+header.contactHeaderBox div.contactTop {
+    margin: 40px 10px;
+}
+.contactHeaderBox .contactTop h2 {
+    text-align: left;
+}
+
 
 /* footer共通 */
 footer {
@@ -216,10 +235,6 @@ header.contactHeaderBox {
 }
 
 /* news */
-/* TODO:header設定 */
-header.newsHeaderBox .newsTop {
-    margin: 30px 0 50px;
-}
 @media screen and (min-width:375px) {
     main.newsContainer {
         padding: 40px 10px;
@@ -317,13 +332,6 @@ header.newsHeaderBox .newsTop {
 }
 
 /* menu */
-/* TODO:header */
-header.menuHeaderBox .menuTop {
-    margin: 60px 0 240px;
-}
-.menuHeaderBox .menuTop p {
-    margin: 20px 15px 0;
-}
 @media screen and (min-width:375px) and (max-width:767px) {
     main.menuContainer {
         padding: 10px;
@@ -358,13 +366,6 @@ header.menuHeaderBox .menuTop {
 }
 
 /* contact */
-/* TODO:header */
-header.contactHeaderBox div.contactTop {
-    margin: 40px 10px;
-}
-.contactHeaderBox .contactTop h2 {
-    text-align: left;
-}
 /* TODO:formの残骸 */
 @media screen and (min-width:375px) {
     .contactHeaderBox .contactTop section.mailForm {
