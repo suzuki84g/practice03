@@ -73,6 +73,9 @@ h3 {
     padding: 10px 5px;
 }
 
+/* TODO:header固定に関する記述 */
+/* position: fixed; */
+
 /* header共通 */
 div.container header[class*=HeaderBox] {
     display: flex;
@@ -176,8 +179,7 @@ footer p {
 }
 
 /* buttonデザイン */
-main.indexBox button,
-header.contactHeaderBox form input[type=submit] {
+main.indexBox button, form input[type=submit] {
     padding: 10px 30px;
     border: solid 0px;
     border-radius: 5px;
@@ -354,27 +356,28 @@ header.contactHeaderBox form input[type=submit] {
 }
 
 /* contact */
-/* TODO:formの残骸 */
-@media screen and (min-width:375px) {
-    .contactHeaderBox .contactTop section.mailForm {
-        margin: 10px 0;
-    }
-    .contactHeaderBox .contactTop form dl>*{
-        margin-bottom: 10px;
-    }
-    .contactHeaderBox .contactTop form input[type=text],
-    .contactHeaderBox .contactTop form textarea {
-        border: #ffffff solid 1px;
-        border-radius: 5px;
-        background-color: rgba(255,255,255,0.5);
-        width: 100%;
-    }
+.contactContainer section.mailForm {
+    padding: 10px;
+}
+.contactContainer section.mailForm form{
+    padding: 10px;
+}
+.contactContainer section.mailForm form dt {
+    padding-top: 8px;
+}
+.contactContainer section.mailForm form dd {
+    padding-top: 3px;
+}
+.contactContainer form input[type=text], .contactContainer form textarea {
+    border: #d4d9d6 solid 1px;
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
 }
 @media screen and (min-width:768px) {
-    .contactHeaderBox .contactTop form input[type=text] {
+    .contactContainer form input[type=text] {
         width: 25%;
     }
-    .contactHeaderBox .contactTop form textarea {
+    .contactContainer form textarea {
         width: 50%;
     }
 }
