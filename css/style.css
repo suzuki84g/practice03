@@ -157,8 +157,6 @@ header.contactHeaderBox {
     background-position: center center;  /* 横中央縦中央 */
     background-repeat: no-repeat;  /* リピートしない */
     background-size: cover;  /* 縦横比を維持したまま画面領域を覆う */
-}
-.indexFullscreen, .newsHeaderBox, .menuHeaderBox, .contactHeaderBox {
     background-blend-mode: lighten;  /* 透過指定とオプション */
 }
 .indexFullscreen {
