@@ -73,15 +73,16 @@ h3 {
     padding: 10px 5px;
 }
 
-/* TODO:header固定に関する記述 */
-/* position: fixed; */
 
 /* header共通 */
 div.container header[class*=HeaderBox] {
     display: flex;
     flex-direction: column;
+    /* TODO:高さ指定が必要だが、現状はautoっぽい？要確認 */
+    /* TODO:右記を入れて固定する「position: fixed; */
+    /* TODO:bodyに同じ高さに少々加えた余白を取る */
 }
-@media screen and (min-width:320px) {  /* モバイルファースト */
+@media screen and (min-width:375px) {  /* モバイルファースト */
     div.container header[class*=HeaderBox] div.generalNavigation {
         display: flex;
         flex-direction: column;
