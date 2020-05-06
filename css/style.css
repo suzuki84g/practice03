@@ -1,0 +1,407 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+/* bodyコンテナ化 共通 */
+body div.container {  /* container導入 */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+@media screen and (min-width:375px) {
+    header {  /* 横枠を100％まで広がって自動で余白を取る */
+        width: 100%;
+        margin: 0 auto;
+    }
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
+    footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width:768px) {
+    header>div {  /* タブレット以上は80%まで */
+        width: 80%;
+        margin: 0 auto;
+    }
+    header>div>div.sentence {
+        width: 60%;
+        margin: 0 auto;
+    }
+    main {
+        width: 80%;
+        margin: 0 auto;
+    }
+    footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* 全体共通部品 */
+body {
+    font-size: 100%;
+    color: #4d2100;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+}
+body ul li {
+    color: #4d2100;
+    list-style-type: none;  /* 行頭記号無し */
+    padding: 0px;  /* デフォルトの行頭記号余白を無効化 */
+    margin: 0px;  /* デフォルトの行頭記号余白を無効化 */
+}
+body ul li:hover {
+    color: #0bd;  /* 要件 */
+}
+a[href]{
+    text-decoration: none;  /* リンクのデコレーションを無効化 */
+    color: #4d2100;
+}
+h3 {
+    text-align: left;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    font-size: large;
+    border-bottom: #00a1e9 solid 2px;
+    padding: 10px 5px;
+}
+
+/* TODO:header固定に関する記述 */
+/* position: fixed; */
+
+/* header共通 */
+div.container header[class*=HeaderBox] {
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width:320px) {  /* モバイルファースト */
+    div.container header[class*=HeaderBox] div.generalNavigation {
+        display: flex;
+        flex-direction: column;
+    }
+    header[class*=HeaderBox] .logo {  /* logoのボックスサイズ */
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width:768px) {  /* タブレット以上 */
+    div.container header[class*=HeaderBox] div.generalNavigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    div.generalNavigation div.logo {
+        align-self: flex-start;
+    }
+    div.generalNavigation nav {
+        align-self: flex-end;
+    }
+    header[class*=HeaderBox] div.generalNavigation .logo {  /* logoのボックスサイズ */
+        width: 200px;
+        height: auto;
+        margin: 0 auto 0 0;
+    }
+    header div[class*=Top] {
+        align-self: center;
+    }
+}
+header[class*=HeaderBox] div.generalNavigation .logo img {  /* logoのイメージサイズは'div class=logo'に依存 */
+    width: 100%;
+    height: 100%;
+}
+header[class*=HeaderBox] div.generalNavigation nav ul {
+    display: flex;
+    justify-content: center;
+}
+header[class*=HeaderBox] div.generalNavigation nav ul li {
+    margin: 10px 20px;
+}
+header[class*=HeaderBox] div[class*=Top] {
+    margin: 30px 0 50px;
+}
+header[class*=HeaderBox] div[class*=Top] h2 {
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+}
+header[class*=HeaderBox] div[class*=Top] p {
+    text-align: center;
+    margin: 20px 15px 0;
+}
+
+/* 背景画像の指定 */
+body.indexFullscreen {
+    background-image: url(../src/image/main-bg.jpg);
+}
+header.newsHeaderBox {
+    background-image: url(../src/image/news-bg.jpg);
+}
+header.menuHeaderBox {
+    background-image: url(../src/image/menu-bg.jpg);
+}
+header.contactHeaderBox {
+    background-image: url(../src/image/contact-bg.jpg);
+}
+
+/* headerの背景画像に関する設定 */
+.newsHeaderBox, .menuHeaderBox, .contactHeaderBox, .indexFullscreen {  /* 背景共通設定 */
+    background-position: center center;  /* 横中央縦中央 */
+    background-repeat: no-repeat;  /* リピートしない */
+    background-size: cover;  /* 縦横比を維持したまま画面領域を覆う */
+}
+.indexFullscreen, .newsHeaderBox, .menuHeaderBox, .contactHeaderBox {
+    background-blend-mode: lighten;  /* 透過指定とオプション */
+}
+.indexFullscreen {
+    background-color: rgba(255,255,255,0.1);
+}
+.newsHeaderBox, .menuHeaderBox, .contactHeaderBox {
+    background-color: rgba(255,255,255,0.4);
+}
+
+/* footer共通 */
+footer {
+    background: #331600;
+}
+footer p {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* buttonデザイン */
+main.indexBox button, form input[type=submit] {
+    padding: 10px 30px;
+    border: solid 0px;
+    border-radius: 5px;
+    background-color: #00bfff;
+    color: #ffffff;
+}
+
+/* index */
+.indexBox h2 {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    text-align: center;
+    margin: 20px 0px;
+    width: 90%;
+}
+@media screen and (min-width:375px) {
+    main.indexBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0px;
+    }
+    .indexBox p {
+        text-align: left;
+        width: 90%;
+    }
+}
+@media screen and (min-width:768px) {
+    main.indexBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 200px 0px;
+    }
+    .indexBox p {
+        text-align: center;
+        width: 90%;
+    }
+}
+.indexBox button {
+    margin: 30px;
+}
+
+/* news */
+@media screen and (min-width:375px) {
+    main.newsContainer {
+        padding: 40px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:768px) {
+    main.newsContainer {
+        padding: 40px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.newsContainer article.articleBox {
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width:768px) {
+    .newsContainer article.articleBox {
+        width: 70%;
+    }
+}
+.newsContainer .articleBox header.articleHeader {
+    display: flex;
+}
+.newsContainer .articleHeader div.timeBackground {
+    width: 70px;
+    height: 70px;
+    background-color: #11cae2e3;
+    border-radius: 50%;  /* 円 */
+    display: flex;
+    justify-content: center;  /* 左右の中央寄せ */
+    padding: 5px
+}
+.newsContainer .articleHeader time.updateTime {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;  /* 縦に長いBox内のspan2つを中央配置指定 */
+}
+.newsContainer .articleHeader time.updateTime span.MMDD {
+    font-size: 100%;
+    border-bottom: #ffffff solid 1px;
+    padding-bottom: 3px;
+}
+.newsContainer .articleHeader time.updateTime span.yyyy {
+    font-size: 90%;
+}
+.newsContainer .articleHeader div.contentTitle {
+    padding: 5px 10px;
+    flex: 1;
+}
+.newsContainer .articleHeader div.contentTitle h3 {
+    padding: 5px 0;
+    border: none;
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+.newsContainer .articleHeader div.contentTitle p .category {
+    padding: 5px 0;
+    font-size: small;
+}
+.newsContainer section.articleContents {
+    margin: 10px 0;
+}
+.newsContainer .articleContents img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+.newsContainer .articleContents p {
+    padding: 3px 0;
+}
+.newsContainer aside.sidebarBox {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width:768px) {
+    .newsContainer aside.sidebarBox {
+        width: 25%;
+    }
+}
+.newsContainer .sidebarBox section {
+    margin: 15px 0;
+}
+.newsContainer .sidebarBox section ul li {
+    border-bottom: solid #d4d9d6 1px;
+    padding: 10px;
+}
+.newsContainer .sidebarBox section p {
+    padding: 10px;
+}
+
+/* menu */
+@media screen and (min-width:375px) and (max-width:767px) {
+    main.menuContainer {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .menuContainer figure.gridBox {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width:768px) {
+    main.menuContainer {
+        padding: 10px;
+        display: grid;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-columns: 33% 33% 33%;
+    }
+    .menuContainer figure.gridBox:first-child {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    .menuContainer figure.gridBox {
+        margin: 5px;
+    }
+}
+.menuContainer .gridBox img {
+    width: 100%;
+    height: auto;
+}
+.menuContainer .gridBox figcaption {
+    font-size: small;
+}
+
+/* contact */
+.contactContainer section.mailForm {
+    padding: 10px;
+}
+.contactContainer section.mailForm form{
+    padding: 10px;
+}
+.contactContainer section.mailForm form dt {
+    padding-top: 8px;
+}
+.contactContainer section.mailForm form dd {
+    padding-top: 3px;
+}
+.contactContainer form input[type=text], .contactContainer form textarea {
+    border: #d4d9d6 solid 1px;
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
+}
+@media screen and (min-width:768px) {
+    .contactContainer form input[type=text] {
+        width: 25%;
+    }
+    .contactContainer form textarea {
+        width: 50%;
+    }
+}
+.contactContainer section.mapBox {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+@media screen and (min-width:768px) {
+    .contactContainer section.mapBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    aside {
+        width: 25%;
+    }
+    div.googleMap {
+        width: 70%;
+    }
+}
+.contactContainer section h3,
+footer .footerMedia h3 {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.contactContainer .mapBox aside div.storeInformation {
+    padding: 10px;
+}
