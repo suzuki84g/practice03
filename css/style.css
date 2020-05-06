@@ -73,6 +73,9 @@ h3 {
     padding: 10px 5px;
 }
 
+/* TODO:header固定に関する記述 */
+/* position: fixed; */
+
 /* header共通 */
 div.container header[class*=HeaderBox] {
     display: flex;
