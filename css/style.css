@@ -31,7 +31,7 @@ body div.container {  /* container導入 */
         margin: 0 auto;
     }
     header>div>div.sentence {
-        width: 60%;
+        width: 100%;
         margin: 0 auto;
     }
     main {
