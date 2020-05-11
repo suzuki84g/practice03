@@ -75,12 +75,32 @@ h3 {
 
 
 /* header共通 */
+/* TODO:bodyに同じ高さに少々加えた余白を取る */
 div.container header[class*=HeaderBox] {
     display: flex;
     flex-direction: column;
-    /* TODO:高さ指定が必要だが、現状はautoっぽい？要確認 */
-    /* TODO:右記を入れて固定する「position: fixed; */
-    /* TODO:bodyに同じ高さに少々加えた余白を取る */
+}
+header[class*=HeaderBox] div.generalNavigation .logo img {  /* logoのイメージサイズは'div class=logo'に依存 */
+    width: 100%;
+    height: 100%;
+}
+header[class*=HeaderBox] div.generalNavigation nav ul {
+    display: flex;
+    justify-content: center;
+}
+header[class*=HeaderBox] div.generalNavigation nav ul li {
+    margin: 10px 20px;
+}
+header[class*=HeaderBox] div[class*=Top] h2 {
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    margin: 10px 0px;
+}
+header[class*=HeaderBox] div[class*=Top] p {
+    text-align: center;
+    margin: 10px 0px;
 }
 @media screen and (min-width:375px) {  /* モバイルファースト */
     div.container header[class*=HeaderBox] div.generalNavigation {
@@ -94,6 +114,14 @@ div.container header[class*=HeaderBox] {
     }
 }
 @media screen and (min-width:768px) {  /* タブレット以上 */
+    div.container header[class*=HeaderBox] {
+        position: fixed;  /* header固定 */
+        height: 180px;
+        width: 100%;
+    }
+    div.container header[class*=HeaderBox] div[class*=Top] {
+        margin: 10px 0 20px;
+    }
     div.container header[class*=HeaderBox] div.generalNavigation {
         display: flex;
         flex-direction: row;
@@ -114,30 +142,7 @@ div.container header[class*=HeaderBox] {
         align-self: center;
     }
 }
-header[class*=HeaderBox] div.generalNavigation .logo img {  /* logoのイメージサイズは'div class=logo'に依存 */
-    width: 100%;
-    height: 100%;
-}
-header[class*=HeaderBox] div.generalNavigation nav ul {
-    display: flex;
-    justify-content: center;
-}
-header[class*=HeaderBox] div.generalNavigation nav ul li {
-    margin: 10px 20px;
-}
-header[class*=HeaderBox] div[class*=Top] {
-    margin: 30px 0 50px;
-}
-header[class*=HeaderBox] div[class*=Top] h2 {
-    text-align: center;
-    font-family: 'Philosopher', sans-serif;
-    font-weight: 400;
-    font-size: xx-large;
-}
-header[class*=HeaderBox] div[class*=Top] p {
-    text-align: center;
-    margin: 20px 15px 0;
-}
+
 
 /* 背景画像の指定 */
 body.indexFullscreen {
