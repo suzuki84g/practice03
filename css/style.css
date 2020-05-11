@@ -67,7 +67,6 @@ h3 {
     padding: 10px 5px;
 }
 
-
 /* header共通 */
 header.header-bk {
     position: fixed;
@@ -165,6 +164,11 @@ div[class*=HeaderBox] div[class*=Top] p {
     background-color: rgba(255,255,255,0.4);
 }
 
+/* main共通 */
+main {
+    margin-top: 200px;
+}
+
 /* footer共通 */
 footer {
     background: #331600;
@@ -223,7 +227,6 @@ main.indexBox button, form input[type=submit] {
 
 /* news */
 main.newsContainer {
-    padding: 40px 10px;
     display: flex;
     flex-direction: column;
 }
