@@ -69,6 +69,9 @@ h3 {
 
 
 /* header共通 */
+header.header-bk {
+    position: fixed;
+}
 div.container div[class*=HeaderBox] {
     display: flex;
     flex-direction: column;
