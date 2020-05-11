@@ -24,7 +24,7 @@ footer {
     margin: 0 auto;
 }
 @media screen and (min-width:768px) {  /* タブレット以上 */
-    header>div>div {
+    header>div>div {  /* 背景を残して文字のboxのみを縮小 */
         width: 80%;
         margin: 0 auto;
     }
