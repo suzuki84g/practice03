@@ -11,7 +11,7 @@ body div.container {  /* container導入 */
     min-height: 100vh;
     align-items: center;
 }
-header {  /* SP */
+header.header-bk {  /* SP */
     width: 100%;
     margin: 0 auto;
 }
@@ -24,7 +24,7 @@ footer {
     margin: 0 auto;
 }
 @media screen and (min-width:768px) {  /* タブレット以上 */
-    header>div>div {  /* 背景を残して文字のboxのみを縮小 */
+    header.header-bk>div>div {  /* 背景を残して文字のboxのみを縮小 */
         width: 80%;
         margin: 0 auto;
     }
@@ -275,7 +275,7 @@ main.newsContainer {
     font-size: 90%;
 }
 .newsContainer .articleHeader div.contentTitle {
-    padding: 5px 10px;
+    padding: 5px 0px 5px 10px;
     flex: 1;
 }
 .newsContainer .articleHeader div.contentTitle h3 {
