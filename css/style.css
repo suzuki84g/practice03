@@ -257,7 +257,8 @@ main.newsContainer {
     border-radius: 50%;  /* 円 */
     display: flex;
     justify-content: center;  /* 左右の中央寄せ */
-    padding: 5px
+    padding: 5px;
+    margin-top: 5px;
 }
 .newsContainer .articleHeader time.updateTime {
     display: flex;
@@ -275,7 +276,8 @@ main.newsContainer {
     font-size: 90%;
 }
 .newsContainer .articleHeader div.contentTitle {
-    padding: 5px 0px 5px 10px;
+    margin-left: 10px;
+    padding: 0px 0px 5px 0px;
     flex: 1;
 }
 .newsContainer .articleHeader div.contentTitle h3 {
