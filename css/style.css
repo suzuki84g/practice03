@@ -165,8 +165,13 @@ div[class*=HeaderBox] div[class*=Top] p {
 }
 
 /* main共通 */
-main {
-    margin-top: 200px;
+main{
+    margin-top: 250px;
+}
+@media screen and (min-width:768px) {
+    main {
+        margin-top: 200px;
+    }
 }
 
 /* footer共通 */
