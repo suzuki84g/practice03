@@ -11,27 +11,21 @@ body div.container {  /* container導入 */
     min-height: 100vh;
     align-items: center;
 }
-@media screen and (min-width:375px) {
-    header {  /* 横枠を100％まで広がって自動で余白を取る */
-        width: 100%;
-        margin: 0 auto;
-    }
-    main {
-        width: 100%;
-        margin: 0 auto;
-    }
-    footer {
-        width: 100%;
-        margin: 0 auto;
-    }
+header {  /* SP */
+    width: 100%;
+    margin: 0 auto;
 }
-@media screen and (min-width:768px) {
-    header>div {  /* タブレット以上は80%まで */
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+footer {
+    width: 100%;
+    margin: 0 auto;
+}
+@media screen and (min-width:768px) {  /* タブレット以上 */
+    header>div>div {
         width: 80%;
-        margin: 0 auto;
-    }
-    header>div>div.sentence {
-        width: 100%;
         margin: 0 auto;
     }
     main {
@@ -75,54 +69,51 @@ h3 {
 
 
 /* header共通 */
-/* TODO:bodyに同じ高さに少々加えた余白を取る */
-div.container header[class*=HeaderBox] {
+div.container div[class*=HeaderBox] {
     display: flex;
     flex-direction: column;
 }
-header[class*=HeaderBox] div.generalNavigation .logo img {  /* logoのイメージサイズは'div class=logo'に依存 */
+div[class*=HeaderBox] div.generalNavigation .logo img {  /* logoのイメージサイズは'div class=logo'に依存 */
     width: 100%;
     height: 100%;
 }
-header[class*=HeaderBox] div.generalNavigation nav ul {
+div[class*=HeaderBox] div.generalNavigation nav ul {
     display: flex;
     justify-content: center;
 }
-header[class*=HeaderBox] div.generalNavigation nav ul li {
+div[class*=HeaderBox] div.generalNavigation nav ul li {
     margin: 10px 20px;
 }
-header[class*=HeaderBox] div[class*=Top] h2 {
+div[class*=HeaderBox] div[class*=Top] h2 {
     text-align: center;
     font-family: 'Philosopher', sans-serif;
     font-weight: 400;
     font-size: xx-large;
     margin: 10px 0px;
 }
-header[class*=HeaderBox] div[class*=Top] p {
+div[class*=HeaderBox] div[class*=Top] p {
     text-align: center;
     margin: 10px 0px;
 }
 @media screen and (min-width:375px) {  /* モバイルファースト */
-    div.container header[class*=HeaderBox] div.generalNavigation {
+    div.container div[class*=HeaderBox] div.generalNavigation {
         display: flex;
         flex-direction: column;
     }
-    header[class*=HeaderBox] .logo {  /* logoのボックスサイズ */
+    div[class*=HeaderBox] .logo {  /* logoのボックスサイズ */
         width: 200px;
         height: auto;
         margin: 0 auto;
     }
 }
 @media screen and (min-width:768px) {  /* タブレット以上 */
-    div.container header[class*=HeaderBox] {
-        position: fixed;  /* header固定 */
-        height: 180px;
+    div.container div[class*=HeaderBox] {
         width: 100%;
     }
-    div.container header[class*=HeaderBox] div[class*=Top] {
+    div.container div[class*=HeaderBox] div[class*=Top] {
         margin: 10px 0 20px;
     }
-    div.container header[class*=HeaderBox] div.generalNavigation {
+    div.container div[class*=HeaderBox] div.generalNavigation {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -133,7 +124,7 @@ header[class*=HeaderBox] div[class*=Top] p {
     div.generalNavigation nav {
         align-self: flex-end;
     }
-    header[class*=HeaderBox] div.generalNavigation .logo {  /* logoのボックスサイズ */
+    div[class*=HeaderBox] div.generalNavigation .logo {  /* logoのボックスサイズ */
         width: 200px;
         height: auto;
         margin: 0 auto 0 0;
@@ -143,18 +134,17 @@ header[class*=HeaderBox] div[class*=Top] p {
     }
 }
 
-
 /* 背景画像の指定 */
-body.indexFullscreen {
+.indexFullscreen {
     background-image: url(../src/image/main-bg.jpg);
 }
-header.newsHeaderBox {
+.newsHeaderBox {
     background-image: url(../src/image/news-bg.jpg);
 }
-header.menuHeaderBox {
+.menuHeaderBox {
     background-image: url(../src/image/menu-bg.jpg);
 }
-header.contactHeaderBox {
+.contactHeaderBox {
     background-image: url(../src/image/contact-bg.jpg);
 }
 
@@ -229,12 +219,10 @@ main.indexBox button, form input[type=submit] {
 }
 
 /* news */
-@media screen and (min-width:375px) {
-    main.newsContainer {
-        padding: 40px 10px;
-        display: flex;
-        flex-direction: column;
-    }
+main.newsContainer {
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
 }
 @media screen and (min-width:768px) {
     main.newsContainer {
