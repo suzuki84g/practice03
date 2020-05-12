@@ -232,6 +232,7 @@ main.indexBox button, form input[type=submit] {
 
 /* news */
 main.newsContainer {
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
