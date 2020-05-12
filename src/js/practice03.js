@@ -1,3 +1,5 @@
+'use strict';
+
 console.log('hello world!!');
 
 /* menuのスライドショー
@@ -9,6 +11,14 @@ div.slidesの中身に.gridBoxがあるので、
 // slide配下のfigureタグが全て配列に格納される
 const slides = document.getElementsByClassName('slides')[0].getElementsByTagName('figure');
 
-function slideImages(figure_no) {
-    slides[figure_no].style.display = 'block';  //0番目の`slide`のdisplayにblockを書き込む（CSSをHTML側で上書きする）
+function slideImages(figureNum) {
+    // 1つ前の番号のものを非表示にする
+    let noneNum = figureNum - 1;  //デクリメント
+    if (slides[noneNum]) {
+        slides[noneNum].style.display = 'none';
+    };
+    // 渡した値のfigureを表示させる
+    slides[figureNum].style.display = 'block';
 }
+
+// setInterval(slideImages, 3000[0]);
