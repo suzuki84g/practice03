@@ -337,17 +337,16 @@ main.menuContainer {
     margin-bottom: 20px;
 }
 @media screen and (min-width:768px) {
-    main.menuContainer {
-        padding: 10px;
+    main.menuContainer .slides {
         display: grid;
         grid-template-rows: 25% 25% 25% 25%;
         grid-template-columns: 33% 33% 33%;
     }
-    .menuContainer figure.gridBox:first-child {
+    .slides figure.gridBox:first-child {
         grid-column: 1/3;
         grid-row: 1/3;
     }
-    .menuContainer figure.gridBox {
+    .slides figure.gridBox {
         margin: 5px;
     }
 }
