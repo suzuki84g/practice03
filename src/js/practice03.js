@@ -8,6 +8,8 @@ div.slidesの中身に.gridBoxがあるので、
 
 // slide配下のfigureタグが全て配列に格納される
 const slides = document.getElementsByClassName('slides')[0].getElementsByTagName('figure');
+// 要素数を変数に記録
+const slidesLength = Object.keys(slides).length;
 
 function slideImages(figureNum) {
     // 1つ前の番号のものを非表示にする
@@ -24,4 +26,5 @@ function slideImages(figureNum) {
     }
 }
 
+// TODO:ループさせる方法について検討（forとslidesLengthで上手いことやるのが多分良い
 // setInterval(slideImages, 3000[0]);
