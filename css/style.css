@@ -333,6 +333,9 @@ main.menuContainer {
     display: flex;
     flex-direction: column;
 }
+.menuContainer .slides {
+    display: grid;
+}
 .menuContainer figure.gridBox {
     margin-bottom: 20px;
 }
