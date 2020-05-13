@@ -232,6 +232,7 @@ main.indexBox button, form input[type=submit] {
 
 /* news */
 main.newsContainer {
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -327,29 +328,31 @@ main.newsContainer {
 }
 
 /* menu */
-@media screen and (min-width:375px) and (max-width:767px) {
-    main.menuContainer {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-    .menuContainer figure.gridBox {
-        margin-bottom: 20px;
-    }
+main.menuContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.menuContainer .slides {
+    display: grid;
+}
+.menuContainer .slides figure.gridBox {
+    display: none;
+    margin-bottom: 20px;
 }
 @media screen and (min-width:768px) {
-    main.menuContainer {
-        padding: 10px;
+    main.menuContainer .slides {
         display: grid;
         grid-template-rows: 25% 25% 25% 25%;
         grid-template-columns: 33% 33% 33%;
     }
-    .menuContainer figure.gridBox:first-child {
+    .menuContainer .slides figure.gridBox {
+        display: block;
+        margin: 5px;
+    }
+    .slides figure.gridBox:first-child {
         grid-column: 1/3;
         grid-row: 1/3;
-    }
-    .menuContainer figure.gridBox {
-        margin: 5px;
     }
 }
 .menuContainer .gridBox img {
