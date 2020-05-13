@@ -12,11 +12,11 @@ const slides = document.getElementsByClassName('slides')[0].getElementsByTagName
 const slidesLength = Object.keys(slides).length;
 
 function slideImages(figureNum) {
-    // 1つ前の番号のものを非表示にする
-    let noneNum = figureNum - 1;  //デクリメント
-    if (slides[noneNum]) {
-        slides[noneNum].style.display = 'none';
-    };
+
+    // 全てのdisplayをnoneにする
+    for (let cnt = 0; cnt < slidesLength; cnt++) {
+        slides[cnt].style.display = 'none';
+    }
     // 渡した値のfigureを表示させる
     if (slides[figureNum]) {
         slides[figureNum].style.display = 'block';
@@ -28,3 +28,9 @@ function slideImages(figureNum) {
 
 // TODO:ループさせる方法について検討（forとslidesLengthで上手いことやるのが多分良い
 // setInterval(slideImages, 3000[0]);
+
+/* figure表示用テスト
+slides[0].style.display = 'block';
+slides[1].style.display = 'block';
+slides[2].style.display = 'block';
+*/
