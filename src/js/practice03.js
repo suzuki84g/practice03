@@ -24,21 +24,15 @@ function slideImages(figureNum) {
     if (slides[figureNum]) {
         slides[figureNum].style.display = 'block';
     } else {
-        // 引数のfigureが存在しない場合は0番目を表示させる
+        // 引数のfigureが存在しない場合は0番目を表示させる（エラー回避）
         slides[0].style.display = 'block';
     };
     // 次のSlideを値を決める
-    if (figureNum < slidesLength) {
+    if (figureNum < slidesLength - 1) {  // 要素数から-1して場所を指定
         figureNum++;
     } else {
         figureNum = 0;
     };
-    console.log(figureNum);
+    // ループ処理
     setTimeout(slideImages, 3000, figureNum);
-}
-
-/* figure表示用テスト
-slides[0].style.display = 'block';
-slides[1].style.display = 'block';
-slides[2].style.display = 'block';
-*/
+};
