@@ -11,23 +11,31 @@ const slides = document.getElementsByClassName('slides')[0].getElementsByTagName
 // 要素数を変数に記録
 const slidesLength = Object.keys(slides).length;
 
-function slideImages(figureNum) {
+// 0要素を初期表示
+slideImages(0);
 
+// Slide関数
+function slideImages(figureNum) {
     // 全てのdisplayをnoneにする
     for (let cnt = 0; cnt < slidesLength; cnt++) {
         slides[cnt].style.display = 'none';
-    }
+    };
     // 渡した値のfigureを表示させる
     if (slides[figureNum]) {
         slides[figureNum].style.display = 'block';
     } else {
         // 引数のfigureが存在しない場合は0番目を表示させる
         slides[0].style.display = 'block';
-    }
+    };
+    // 次のSlideを値を決める
+    if (figureNum < slidesLength) {
+        figureNum++;
+    } else {
+        figureNum = 0;
+    };
+    console.log(figureNum);
+    setTimeout(slideImages, 3000, figureNum);
 }
-
-// TODO:ループさせる方法について検討（forとslidesLengthで上手いことやるのが多分良い
-// setInterval(slideImages, 3000[0]);
 
 /* figure表示用テスト
 slides[0].style.display = 'block';
