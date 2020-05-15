@@ -339,6 +339,8 @@ main.menuContainer {
 .menuContainer .slides figure.gridBox {
     display: none;
     margin-bottom: 20px;
+    /* TODO:displayがblockになるときにアニメーションさせる */
+    /* animationを使う */
 }
 @media screen and (min-width:768px) {
     main.menuContainer .slides {
