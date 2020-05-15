@@ -12,6 +12,7 @@ const slides = document.getElementsByClassName('slides')[0].getElementsByTagName
 const slidesLength = Object.keys(slides).length;
 
 // 0要素を初期表示
+// TODO:初動のキックを画面サイズで分岐させる
 slideImages(0);
 
 // Slide関数
