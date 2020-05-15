@@ -328,6 +328,14 @@ main.newsContainer {
 }
 
 /* menu */
+@keyframes menuAnimationIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 main.menuContainer {
     padding: 10px;
     display: flex;
@@ -339,8 +347,9 @@ main.menuContainer {
 .menuContainer .slides figure.gridBox {
     display: none;
     margin-bottom: 20px;
-    /* TODO:displayがblockになるときにアニメーションさせる */
-    /* animationを使う */
+    /* displayがblockになるときにアニメーションさせる */
+    animation-name: menuAnimationIn;
+    animation-duration: 1s;
 }
 @media screen and (min-width:768px) {
     main.menuContainer .slides {
