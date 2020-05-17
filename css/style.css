@@ -394,6 +394,10 @@ main.menuContainer {
 .contactContainer section.mailForm form {
     padding: 10px;
 }
+.contactContainer section.mailForm form dl{
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
 .contactContainer section.mailForm form dt {
     padding-top: 8px;
 }
