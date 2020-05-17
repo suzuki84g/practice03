@@ -10,10 +10,18 @@ div.slidesの中身に.gridBoxがあるので、
 const slides = document.getElementsByClassName('slides')[0].getElementsByTagName('figure');
 // 要素数を変数に記録
 const slidesLength = Object.keys(slides).length;
+// 画面横幅を取得
+const windowWidth = window.parent.screen.width;
+// ブレイクポイントの定義
+const windowSp = 375;
+const windowTablet = 768;
+const windowPc = 1024;
 
 // 0要素を初期表示
-// TODO:初動のキックを画面サイズで分岐させる
-slideImages(0);
+// 初動のキックを画面サイズで分岐させる
+if (windowWidth < windowTablet) {
+    slideImages(0);
+};
 
 // Slide関数
 function slideImages(figureNum) {
