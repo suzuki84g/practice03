@@ -64,14 +64,15 @@
                         <dt>メールアドレス</dt>
                         <dd><input type="text" name="email"></dd>
                         <dt>人数（最大10名）</dt>
-                        <dd><input type="text" name="numOfPeople" maxlength="1"></dd>
+                        <dd><input type="text" name="numOfPeople"></dd>
                         <dt>その他お問い合わせ（200字まで）</dt>
                         <dd>
                             <textarea name="message" cols="30" rows="4" maxlength="200" onkeyup="showLength(value);"></textarea>
                             <p id="inputLength">現在0文字</p>
                         </dd>
                     </dl>
-                    <input type="submit" value="送信">
+                    <button type="button">入力確認</button>
+                    <button type="reset">リセット</button>
                 </form>
             </section>
             <section class="mapBox">

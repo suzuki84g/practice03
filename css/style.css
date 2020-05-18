@@ -198,7 +198,7 @@ footer p {
 }
 
 /* buttonデザイン */
-main.indexBox button, form input[type=submit] {
+main.indexBox button, form input[type=submit], .contactContainer form button {
     padding: 10px 30px;
     border: solid 0px;
     border-radius: 5px;
