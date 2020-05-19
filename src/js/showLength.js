@@ -14,4 +14,13 @@ const inputCheck = () => {
         formObject[nameTag] = fm.elements[i].value;
     };
     console.log(formObject);  // 動作確認用
+}
+
+// TODO:入力内容の精査、変数のスコープ範囲について確認
+// 名前、電話番号、人数、希望予約時間に空欄が無いか
+const nullCheck = (propertyName) => {
+    formObject[propertyName]
 };
+
+// TODO:エラーの出力
+    // ポップアップのアラートを表示させたい
