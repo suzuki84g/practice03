@@ -14,3 +14,14 @@ const inputCheck = () => {
     let test = [fullName, phoneNumber, email, numOfPeople, message];
     console.log(test);
 };
+
+// TODO:リファクタリング
+var fm = document.forms[0];
+var formObject = new Object();
+
+for (i = 0; i < fm.elements.length; i++) {
+    var nameTag = fm.elements[i].name;
+    formObject[nameTag] = fm.elements[i].value;
+}
+
+document.forms[0].elements.length
