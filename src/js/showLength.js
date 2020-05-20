@@ -20,8 +20,15 @@ const inputCheck = () => {
 
 // TODO:名前、電話番号、希望予約時間に空欄が無いか、その他が200字を超えていないかオーバーが無いか
 const lengthCheck = () => {
-    formObject.fullName;
-    formObject.phoneNumber;
+    // 配列を宣言
+    let checkResult = [];
+    if (formObject.fullName.length = 0) {
+        checkResult.push('名前を入力してください');
+    };
+    if (isNaN(formObject.phoneNumber)) {
+        checkResult.push('電話番号は数字のみで入力してください');
+    };
+
     formObject.reserveTime;
     formObject.message;
 };
