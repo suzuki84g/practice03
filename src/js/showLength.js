@@ -11,7 +11,7 @@ let formObject = new Object();  // form登録情報を格納するオブジェ�
 let checkResult = [];  // form入力内容の確認結果を入力する配列
 
 // form入力内容を取得
-const inputCheck = () => {
+const formInput = () => {
     for (i = 0; i < fm.elements.length; i++) {
         var nameTag = fm.elements[i].name;
         formObject[nameTag] = fm.elements[i].value;
