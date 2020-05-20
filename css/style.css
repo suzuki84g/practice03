@@ -60,11 +60,24 @@ a[href]{
 }
 h3 {
     text-align: left;
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
     font-size: large;
     border-bottom: #00a1e9 solid 2px;
     padding: 10px 5px;
+}
+form input[type=text], form textarea {
+    border: #d4d9d6 solid 1px;
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
+}
+@media screen and (min-width:768px) {
+    form input[type=text] {
+        width: 25%;
+    }
+    form textarea {
+        width: 50%;
+    }
 }
 
 /* header共通 */
@@ -185,7 +198,7 @@ footer p {
 }
 
 /* buttonデザイン */
-main.indexBox button, form input[type=submit] {
+main.indexBox button, form input[type=button], form input[type=reset] {
     padding: 10px 30px;
     border: solid 0px;
     border-radius: 5px;
@@ -378,8 +391,12 @@ main.menuContainer {
 .contactContainer section.mailForm {
     padding: 10px;
 }
-.contactContainer section.mailForm form{
+.contactContainer section.mailForm form {
     padding: 10px;
+}
+.contactContainer section.mailForm form dl{
+    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 .contactContainer section.mailForm form dt {
     padding-top: 8px;
@@ -387,22 +404,12 @@ main.menuContainer {
 .contactContainer section.mailForm form dd {
     padding-top: 3px;
 }
-.contactContainer form input[type=text], .contactContainer form textarea {
-    border: #d4d9d6 solid 1px;
-    background-color: rgba(255,255,255,0.5);
-    width: 100%;
-}
-@media screen and (min-width:768px) {
-    .contactContainer form input[type=text] {
-        width: 25%;
-    }
-    .contactContainer form textarea {
-        width: 50%;
-    }
-}
 .contactContainer section.mapBox {
     padding: 10px;
     margin-bottom: 30px;
+}
+.contactContainer section.mapBox aside div.storeInformation {
+    padding: 10px;
 }
 @media screen and (min-width:768px) {
     .contactContainer section.mapBox {
@@ -410,17 +417,10 @@ main.menuContainer {
         flex-direction: row;
         justify-content: space-between;
     }
-    aside {
+    .contactContainer section.mapBox aside {
         width: 25%;
     }
-    div.googleMap {
+    .contactContainer section.mapBox div.googleMap {
         width: 70%;
     }
-}
-.contactContainer section h3,
-footer .footerMedia h3 {
-    font-family: 'Noto Sans JP', sans-serif;
-}
-.contactContainer .mapBox aside div.storeInformation {
-    padding: 10px;
 }

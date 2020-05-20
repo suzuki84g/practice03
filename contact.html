@@ -55,7 +55,7 @@
         <main class="contactContainer">
             <section class="mailForm">
                 <h3>予約フォーム</h3>
-                <form>
+                <form id="reserveForm">
                     <dl>
                         <dt>お名前</dt>
                         <dd><input type="text" name="fullName"></dd>
@@ -63,12 +63,18 @@
                         <dd><input type="text" name="phoneNumber"></dd>
                         <dt>メールアドレス</dt>
                         <dd><input type="text" name="email"></dd>
-                        <dt>人数（最大10名）</dt>
+                        <dt>人数</dt>
                         <dd><input type="text" name="numOfPeople"></dd>
-                        <dt>その他お問い合わせ</dt>
-                        <dd><textarea name="message" cols="30" rows="4" maxlength="200"></textarea></dd>  <!-- 最大200字 -->
+                        <dt>希望予約時間</dt>
+                        <dd><input type="text" name="reserveTime"></dd>
+                        <dt>その他お問い合わせ（200字まで）</dt>
+                        <dd>
+                            <textarea name="message" cols="30" rows="4" maxlength="300" onkeyup="showLength(value);"></textarea>
+                            <p id="inputLength">現在0文字</p>
+                        </dd>
                     </dl>
-                    <input type="submit" value="送信">
+                    <input type="button" name="confirmation" value="入力確認" onclick="inputCheck();">
+                    <input type="reset" name="reset" value="リセット">
                 </form>
             </section>
             <section class="mapBox">
@@ -92,6 +98,8 @@
         </footer>
 
     </div>
+
+    <script src="src/js/showLength.js"></script>
 
 </body>
 
