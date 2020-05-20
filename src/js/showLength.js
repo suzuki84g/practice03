@@ -6,8 +6,9 @@ function showLength(str) {
 // TODO:入力確認ボタンが押されたときの動作
 
 // 変数を宣言
-let formObject = new Object();
-let fm = document.forms[0];
+let fm = document.forms[0];  // formのHTMLを静的指定
+let formObject = new Object();  // form登録情報を格納するオブジェクト
+let checkResult = [];  // form入力内容の確認結果を入力する配列
 
 // form入力内容を取得
 const inputCheck = () => {
@@ -18,12 +19,8 @@ const inputCheck = () => {
     console.log(formObject);  // 動作確認用
 };
 
-// TODO:名前、電話番号、希望予約時間に空欄が無いか、その他が200字を超えていないかオーバーが無いか
+// 名前、電話番号、希望予約時間に空欄が無いか、その他が200字を超えていないかオーバーが無いか
 const lengthCheck = () => {
-    // 配列を宣言
-    let checkResult = [];
-
-    // 処理を記載
     if (formObject.fullName.length == 0) {
         checkResult.push('名前を入力してください');
     };
@@ -36,15 +33,8 @@ const lengthCheck = () => {
     if (formObject.message.length >= 200) {
         checkResult.push('200字以下の入力をしてください')
     };
-
-    //動作確認
-    console.log(checkResult);
+    console.log(checkResult);  //動作確認
 };
-
-
-
-    // let valueCount = "formObject[" + member + "].length";
-    // console.log(valueCount);
 
 // TODO:エラーの出力
     // ポップアップのアラートを表示させたい
