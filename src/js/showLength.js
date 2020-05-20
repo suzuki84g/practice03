@@ -33,7 +33,7 @@ const lengthCheck = () => {
     if (formObject.message.length >= 200) {
         checkResult.push('200字以下の入力をしてください')
     };
-    console.log(checkResult);  //動作確認
+    console.log(checkResult);  //動作確認用
 };
 
 // TODO:エラーの出力
