@@ -18,12 +18,18 @@ const inputCheck = () => {
     console.log(formObject);  // 動作確認用
 };
 
-// TODO:名前、電話番号、人数、希望予約時間に空欄が無いか
-// TODO:数字が取れない
-const lengthCheck = function(member) {
-    let valueCount = "formObject[" + member + "].length";
-    console.log(valueCount);
+// TODO:名前、電話番号、希望予約時間に空欄が無いか、その他が200字を超えていないかオーバーが無いか
+const lengthCheck = () => {
+    formObject.fullName;
+    formObject.phoneNumber;
+    formObject.reserveTime;
+    formObject.message;
 };
+
+
+
+    // let valueCount = "formObject[" + member + "].length";
+    // console.log(valueCount);
 
 // TODO:エラーの出力
     // ポップアップのアラートを表示させたい
