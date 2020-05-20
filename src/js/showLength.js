@@ -3,12 +3,16 @@ function showLength(str) {
     document.getElementById('inputLength').innerHTML = "現在" + str.length + "文字";
 };
 
-// TODO:入力確認ボタンが押されたときの動作
 
 // 変数を宣言
 let fm = document.forms[0];  // formのHTMLを静的指定
 let formObject = new Object();  // form登録情報を格納するオブジェクト
 let checkResult = [];  // form入力内容の確認結果を入力する配列
+
+// TODO:入力確認ボタンが押されたときの動作を包括的に処理
+const inputCheck = () => {
+    //関数を順次実行する
+};
 
 // form入力内容を取得
 const formInput = () => {
@@ -36,5 +40,13 @@ const lengthCheck = () => {
     console.log(checkResult);  //動作確認用
 };
 
-// TODO:エラーの出力
+// TODO:チェック結果の出力
     // ポップアップのアラートを表示させたい
+const resultDisplay = () {
+    /*if (エラー==checkResultの中身がある) {
+        配列の中身をアラートで列挙する処理
+    } else {
+        問題ない場合、送信しましたをアラートして、入力内容をクリア
+    }
+    */
+};
