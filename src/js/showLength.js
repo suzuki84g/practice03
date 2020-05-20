@@ -22,15 +22,23 @@ const inputCheck = () => {
 const lengthCheck = () => {
     // 配列を宣言
     let checkResult = [];
-    if (formObject.fullName.length = 0) {
+
+    // 処理を記載
+    if (formObject.fullName.length == 0) {
         checkResult.push('名前を入力してください');
     };
     if (isNaN(formObject.phoneNumber)) {
         checkResult.push('電話番号は数字のみで入力してください');
     };
+    if (formObject.reserveTime.length == 0) {
+        checkResult.push('時間を入力してください');
+    };
+    if (formObject.message.length >= 200) {
+        checkResult.push('200字以下の入力をしてください')
+    };
 
-    formObject.reserveTime;
-    formObject.message;
+    //動作確認
+    console.log(checkResult);
 };
 
 
