@@ -9,9 +9,12 @@ let formObject = new Object();  // form登録情報を格納するオブジェ�
 let checkResult = [];  // form入力内容の確認結果を入力する配列
 let alertMessage = "【入力エラー】\n";  // 入力不備がある場合のアラートメッセージ
 
-// TODO:入力確認ボタンが押されたときの動作を包括的に処理
+// 入力確認ボタンが押されたときの動作を包括的に処理
 const inputCheck = () => {
     //関数を順次実行する
+    formInput();
+    lengthCheck();
+    resultDisplay();
 };
 
 // form入力内容を取得
@@ -66,5 +69,6 @@ const resultDisplay = () => {
         }
         window.alert(alertMessage);
         checkResult.length = 0;  // checkResultを初期化
+        alertMessage = "【入力エラー】\n";
     };
 };
