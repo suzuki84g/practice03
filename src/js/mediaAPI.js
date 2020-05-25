@@ -21,23 +21,22 @@ const requestURLMake = (property) => {
     requestURL = property.basicURL + property.part + property.q + property.order + property.key;
 };
 
-// TODO:Request投げる
+// APIへrequestを送信しresponseのオブジェクトを取得
 const dataGet = (apiURL) => {
     request.open('GET', apiURL, true);
     request.responseType = 'json';
-    console.log(request.responseType);
-    // responseをオブジェクト化する処理
+    // responseをオブジェクトに代入
     request.onload = () => {
-        console.log(request.response);
+        responseData = request.response;
     };
-    // 実際に送信する
+    // 送信する処理
     request.send();
 };
 
 // TODO:HTMLへの反映
-// TODO:処理
 
 // YoutubeMediaAPIの取得の手順を書く
 
+// TODO:処理を適宜追記していく
 requestURLMake(requestProperty);
 dataGet(requestURL);
