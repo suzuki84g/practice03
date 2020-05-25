@@ -4,9 +4,20 @@
 
 // YoutubeMediaAPIの取得の手順を書く
 
-// TODO:URLを定義
+// URLを定義
 // GET https://www.googleapis.com/youtube/v3/search
-const requestURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=(チャンネルID)&order=date&key=' + APIKey;
+let requestURL = null;
+const requestProperty = {
+    URL: 'https://www.googleapis.com/youtube/v3/search',
+    part: '?part=snippet',
+    q: '&q=coffee',
+    order: '&order=relevance',
+    key: '?key=' + APIKey,
+};
+const requestMake = (requestProperty) => {
+    requestURL = requestProperty.URL + requestProperty.part + requestProperty.q + requestProperty.order + requestProperty.key;
+};
+
 const request = new XMLHttpRequest();
 const responseData = null;
 
